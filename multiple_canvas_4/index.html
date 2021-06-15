@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <p>
+      <!-- 
+        HTML dataset을 이용하면 다중 캔버스를 확장하기 더 쉬운 환경을 만들 수 있음.
+        data-diagram로 데이터를 직접 HTML 요소에 지정하는 것.
+
+        HTML dataset을 지정해놓으면 js에서 DOMStringMap으로 리턴받아서
+        마치 하나의 element를 key: value 쌍의 데이터들이 담긴 object처럼 설정하거나 읽고 쓸 수 있음.
+        이때, data- 로 지정하는 데이터는 사용자 지정 데이터로 사용자가 원하는 특성 아무거나 다 지정할 수 있음.
+      -->
+      <span data-diagram="box" class="left"></span>
+      I love boxes. Presents come in boxes. When I find a new box I'm always
+      excited to find out what's inside.
+    </p>
+    <p>
+      <span data-diagram="pyramid" class="diagram right"></span>
+      When I was a kid I dreamed of going on an expedition inside a pyramid and
+      finding a undiscovered tomb full of mummies and treasure.
+    </p>
+  </body>
+</html>

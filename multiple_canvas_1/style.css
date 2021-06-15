@@ -1,0 +1,37 @@
+#canvas {
+  /* 캔버스 요소가 화면 전체를 채우도록 함. */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1; /* 캔버스가 다른 요소들보다 맨 뒤로 가도록 해줌. */
+}
+
+.diagram {
+  /* 가상 요소에 콘텐트가 없어서 inline-block을 해준 뒤, width, height값을 별도로 지정함 */
+  display: inline-block;
+  width: 5em;
+  height: 3em;
+  /* border: 1px solid black; */
+}
+
+/* 각각의 가상요소에 float값을 줘서 가상요소를 감싸는 텍스트들이 각각 가상요소의 우측, 좌측으로 배치되도록 함. */
+.left {
+  float: left;
+  margin-right: 0.25em;
+}
+
+.right {
+  float: right;
+  margin-left: 0.25em;
+}
+
+p {
+  /* 좌우 margin을 auto로 지정하고, 최대 너비를 500px로 지정했으므로,
+  브라우저가 아무리 커지더라도 p 태그 안의 요소들은 500px을 넘기지 못하며, p태그 양옆의 margin은 브라우저 전체 너비에서 500px을 뺀 뒤 남은 값을 알아서 절반씩 나눠서 할당됨. */
+  margin: 1em auto;
+  max-width: 500px;
+  font-size: xx-large;
+}
